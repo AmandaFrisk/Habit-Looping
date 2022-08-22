@@ -1,0 +1,25 @@
+{
+  "name": "habit-looping",
+  "version": "1.0.0",
+  "description": "Habit Looping",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmandaFrisk/Habit-Looping.git"
+  },
+  "author": "Amanda Frisk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmandaFrisk/Habit-Looping/issues"
+  },
+  "homepage": "https://github.com/AmandaFrisk/Habit-Looping#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  }
+}
