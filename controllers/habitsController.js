@@ -24,12 +24,13 @@ router.get('/new', (req, res) => {
     //   res.render('new.ejs');
   })
 
-//POST ROUTE
+//POST CREATE ROUTE
 
 //SHOW ROUTE
-//router.get('id',
+router.get('id', (req, res) => {
+    res.send('show route is working')
 
-
+})
 //EDIT ROUTE
 //router.get('id',
 
