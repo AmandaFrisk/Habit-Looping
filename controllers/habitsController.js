@@ -5,18 +5,42 @@ const express = require('express');
 // /Assign the built in mini app called router to the const variable called router
 const router = express.Router()
 
-
+//require the habits.js from the models
+const Habit = require('../models/habits.js')
 
 
 //Use router rather than app so it is a little faster 
 //ROUTES
 
-//INDEX
+//INDEX ROUTE
 
-// router.get('/')
+router.get('/', (req,res)=>{
+    res.send('index route is working')
+})
+
+//NEW ROUTE
+router.get('/new', (req, res) => {
+     res.send('new route is working')
+    //   res.render('new.ejs');
+  })
+
+//POST ROUTE
+
+//SHOW ROUTE
+//router.get('id',
 
 
+//EDIT ROUTE
+//router.get('id',
 
+//UPDATE
+
+//router.put('/:id',
+
+//DELETE
+
+
+//router.delete('/:id',
 
 
 
