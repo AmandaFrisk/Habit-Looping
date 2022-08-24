@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router()
 
 //require the habits.js from the models
-const Habit = require('../models/habits.js')
+const db = require('../models/habits.js')
 
 
 //Use router rather than app so it is a little faster 
@@ -16,7 +16,11 @@ const Habit = require('../models/habits.js')
 
 router.get('/', (req,res)=>{
     res.send('index route is working')
-})
+    
+    })
+  
+
+
 
 //NEW ROUTE
 router.get('/new', (req, res) => {

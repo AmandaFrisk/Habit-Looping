@@ -8,6 +8,26 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Index Page</h1>
+    <h1>List of Habits</h1>
+
+    <div id="allHabits-List">
+        <ul>
+            <% for(let i=0; i < allHabits.length; i++){ %>
+              
+                
+               <div id="product-preview">
+               <li id="idv-habit">
+
+                <!-- reference the id rather than the position -->
+                  <a href="/habits/<%=allHabits[i].id%>"> <%=allHabits[i].habit%> 
+                    
+                  </a>
+                
+               
+               </li>
+            </div>
+            </div>
+            <%  } %>
+         </ul>
 </body>
 </html>
