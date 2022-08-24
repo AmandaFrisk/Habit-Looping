@@ -9,7 +9,7 @@ const habitSchema = new mongoose.Schema({
     goal:{type: Number, required: true}     //goal number is referencing number of days
     })
 
-//CREATE MODEL
+//CREATE MODEL              //collection   //schema
 const Habit= mongoose.model('Habit' , habitSchema)
 
 //EXPORT MODEL

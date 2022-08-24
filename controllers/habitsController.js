@@ -27,7 +27,7 @@ router.get('/new', (req, res) => {
 //POST CREATE ROUTE
 
 //SHOW ROUTE
-router.get('id', (req, res) => {
+router.get('/id', (req, res) => {
     res.send('show route is working')
 
 })
