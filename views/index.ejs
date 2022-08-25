@@ -5,24 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="#">
     <title>Index</title>
 </head>
 <body>
     <h1>List of Habits</h1>
 
+    <div id="new-habit">
+        <a href="/habits/new">ADD A NEW HABIT</a>
+      </div>
     <div id="allHabits-List">
         <ul>
             <% for(let i=0; i < allHabits.length; i++){ %>
-              
+                <%console.log('this is working', allHabits)%>
                 
-               <div id="product-preview">
+               <div>
                <li id="idv-habit">
 
                 <!-- reference the id rather than the position -->
-                  <a href="/habits/<%=allHabits[i].id%>"> <%=allHabits[i].habit%> 
-                    
+                  <a href="/habits/<%=allHabits[i].id%>"> <%=allHabits[i].habit%>   
                   </a>
-                
+                  <div id="edit">
+                    <a href="/habits/<%=allHabits[i].id%>/edit">Edit</a>
+                  </div>
                
                </li>
             </div>

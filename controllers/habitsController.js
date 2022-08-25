@@ -1,3 +1,5 @@
+// https://habit-looping.herokuapp.com/ 
+
 //HOME OF THE ROUTES
 
 //require express
@@ -6,27 +8,36 @@ const express = require('express');
 const router = express.Router()
 
 //require the habits.js from the models
-const db = require('../models/habits.js')
+const Habit = require('../models/habits.js')
 
 
 //Use router rather than app so it is a little faster 
 //ROUTES
 
+
+//DEFAULT
+
 //INDEX ROUTE
 
 router.get('/', (req,res)=>{
-    res.send('index route is working')
-    
+    // res.send('index route is working')
+    Habit.find({}, (error, allHabits)=>{
+      console.log(allHabits)
+      res.render('index.ejs', 
+          {allHabits});
     })
+  })
   
 
 
 
 //NEW ROUTE
 router.get('/new', (req, res) => {
-     res.send('new route is working')
-    //   res.render('new.ejs');
-  })
+    //  res.send('new route is working')
+    
+  
+})
+  
 
 //POST CREATE ROUTE
 
