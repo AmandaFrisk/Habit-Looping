@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 //CREATE SCHEMA
 const habitSchema = new mongoose.Schema({
     habit: {type: String, required: true},
-    description: {String},
+    description: {type:String},
     goal:{type: Number, required: true}     //goal number is referencing number of days
     })
 
