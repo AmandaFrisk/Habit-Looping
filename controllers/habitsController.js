@@ -52,10 +52,15 @@ router.post('/', (req,res)=>{
   })
 })
 //SHOW ROUTE
-router.get('/id', (req, res) => {
-    res.send('show route is working')
-
-})
+router.get('/:id',  (req, res) => {
+  // res.send('show route is working')
+   Habit.findById(req.params.id, (err, foundHabit)=>{
+      
+      res.render('show.ejs', {
+          habit:foundHabit
+      });
+  });
+});
 //EDIT ROUTE
 //router.get('id',
 
@@ -64,9 +69,13 @@ router.get('/id', (req, res) => {
 //router.put('/:id',
 
 //DELETE
+router.delete('/:id', (req, res)=>{
+  Habit.findByIdAndRemove(req.params.id, (err, data)=>{
+      res.redirect('/habits') //redirect back to index page
+  })
+})
 
 
-//router.delete('/:id',
 
 
 
