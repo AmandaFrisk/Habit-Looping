@@ -62,11 +62,27 @@ router.get('/:id',  (req, res) => {
   });
 });
 //EDIT ROUTE
-//router.get('id',
+router.get('/:id/edit', (req, res)=>{
+  Habit.findById(req.params.id, (err, foundHabit)=>{ //find the product  
+      res.render(
+      'edit.ejs',
+      {
+        habit: foundHabit //pass in found product
+      })
+  })
+})
 
 //UPDATE
+router.put('/:id', (req,res)=>{
+  Habit.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,updatedProduct)=>{
+    if (err){
+      console.log('update err', err)
+    }else{
+      res.redirect(`/habits/${req.params.id}`)
+    }
+  })
+})
 
-//router.put('/:id',
 
 //DELETE
 router.delete('/:id', (req, res)=>{

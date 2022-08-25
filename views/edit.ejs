@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Edit Page</title>
+</head>
+<body>
+    <form action="/habits/<%=habit.id%>?_method=PUT" method="POST">
+        <!-- method is POST because we are creating data  -->
+        <fieldset>
+             <label for="habit">Habit:</label>
+            <input  type ="text" name="habit" id ="habit" value="<%=habit.habit %>"/>
+        </fieldset>
+        <fieldset>
+            <label for="description">Description:</label>
+            <input type ="text" name="description"  id ="description" value="<%=habit.description%>"/>
+        </fieldset>
+        <fieldset>
+             <label for="goal">Goal</label>
+             <input type ="text" name="goal"  id ="goal" value="<%=habit.goal%>"/>
+         </fieldset>
+         <input type="submit" name='submit' value="Submit Changes">
+        
+</body>
+</html>
