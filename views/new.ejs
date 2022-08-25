@@ -9,6 +9,24 @@
     <title>New Page</title>
 </head>
 <body>
-    
+    <h1>ADD A NEW HABIT</h1>
+
+    <form action = "/habits" method ="POST">
+        <!-- method is POST because we are creating data  -->
+        <fieldset>
+        <label for="habit">Habit:</label>
+        <input  type ="text" name="habit" id ="habit"/>
+        </fieldset>
+        <fieldset>
+        <label for="description">Description:</label>
+        <input type ="text" name="description"  id ="description"/>
+        </fieldset>
+        <fieldset>
+            <label for="goal">Goal</label>
+            <input type ="text" name="goal"  id ="goal"/>
+            </fieldset>
+            <input type="submit" value = "Add Habit">
+         <!-- creates a submit button that submits on action -->
+        
 </body>
 </html>

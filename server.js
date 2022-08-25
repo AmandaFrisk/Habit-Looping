@@ -1,6 +1,6 @@
 const express = require('express')
 const app =express()
-
+const methodOverride = require('method-override');
 
 
 //Environment Variables (env)
@@ -32,21 +32,18 @@ mongoose.connection.once('open', () =>{
 
 //MIDDLEWARE
 
-//define route -goes to route /habits plus whatever routes are inside the controller
-app.use('/habits', habitsController)
+
 
 app.use(express.static('public'))
 // What comes back from the new.ejs body is going to be parsed into json format so we can easily manipulate it
-// app.use(express.json());
+app.use(express.json());
 // //Recognize incoming objects as strings or arrays - Also helps us receive json from the new.ejs body
-// app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended:false }));
 // //after app has been defined
 // //use methodOverride.  We'll be adding a query parameter to our delete form named _method
-// app.use(methodOverride('_method'))
-
-
-
-
+app.use(methodOverride('_method'))
+//define route -goes to route /habits plus whatever routes are inside the controller
+app.use('/habits', habitsController)
 
 
 // LISTEN FOR PORT

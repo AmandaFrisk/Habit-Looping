@@ -24,7 +24,7 @@ router.get('/', (req,res)=>{
     Habit.find({}, (error, allHabits)=>{
       console.log(allHabits)
       res.render('index.ejs', 
-          {allHabits});
+          {allHabits})
     })
   })
   
@@ -34,13 +34,23 @@ router.get('/', (req,res)=>{
 //NEW ROUTE
 router.get('/new', (req, res) => {
     //  res.send('new route is working')
-    
-  
+    res.render('new.ejs')
+
 })
   
 
 //POST CREATE ROUTE
-
+router.post('/', (req,res)=>{
+  
+  Habit.create(req.body, (err, createdHabit)=>{
+      if(err) {
+          console.log('error', error)
+          res.send(error)
+      } else {
+          res.redirect('/habits')
+      }
+  })
+})
 //SHOW ROUTE
 router.get('/id', (req, res) => {
     res.send('show route is working')
