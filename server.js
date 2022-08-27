@@ -8,7 +8,7 @@ const methodOverride = require('method-override');
 require('dotenv').config()
 
 // assign env PORT TO variable
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 //IMPORT CONTROLLER
 const habitsController =require('./controllers/habitsController.js')
@@ -45,6 +45,10 @@ app.use(methodOverride('_method'))
 //define route -goes to route /habits plus whatever routes are inside the controller
 app.use('/habits', habitsController)
 
+
+app.get("/", (req,res)=>{
+res.send("Testing")
+})
 
 // LISTEN FOR PORT
 app.listen (PORT, ()=> {
