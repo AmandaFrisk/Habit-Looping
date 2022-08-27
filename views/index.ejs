@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="index-html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,15 @@
   </head>
 <body class="d-flex flex-column min-vh-100">
   <!-- footer We’re making it flex, with the content in columns, from top to bottom, and with a minimum height of 100vh, which means that the element will be equal to 100% of the viewport’s height. -->
-<!-- ???????? -->
+
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="https://i.imgur.com/5X5lg3A.png" width="150" height="150" class="d-inline-block align-top" alt="">
   </a>
-  <!-- ./images/logo.png -->
-
-    <a class="text-decoration-none" href="/habits/new" >ADD A NEW HABIT</a>
+  <div id="add-new-div">
+    <a  class="text-decoration-none" href="/habits/new" >ADD A NEW HABIT
+    </a>
   </div>
-  
 </nav>
   <div id="list-div" class="text-center">
     <h1 id="list-h1">List of Habits</h1>
@@ -35,14 +34,14 @@
                <li class="list-group-item">
 
                 <h5>
-                  <a class="text-decoration-none" href="/habits/<%=allHabits[i].id%>"> <%=allHabits[i].habit%>   
+                  <a id="habit-name" class="text-decoration-none" href="/habits/<%=allHabits[i].id%>"> <%=allHabits[i].habit%>   
                   </a>
                 </h5>
-                <h8>
+                <h10>
                   <div id="edit">
                     <a  class="text-decoration-none" href="/habits/<%=allHabits[i].id%>/edit">Edit</a>
                   </div>
-                </h8>
+                </h10>
                </li>
             </div>
             </div>

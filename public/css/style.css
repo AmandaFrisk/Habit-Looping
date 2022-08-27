@@ -1,19 +1,50 @@
-#list-h1{
+#show-html,#new-html{
+    height:100%
+}
+
+#list-h1,#edit-container, #new-container, #show-container{
 font-family: Arial, Helvetica, sans-serif;
 }
 #list-div{
-    background-color: rgb(167, 241, 162);
+    background-color: rgb(241, 205, 122);
 }
 
-#edit-container, #new-container{
+#show-title-div{
+    background-color:white;
+}
+ #edit-container, #new-container{
     width: 80vw;
     height: 25vw;
     margin: 50px auto;
     display: flex;
     border-radius: 10px;
-    background-color: rgb(241, 221, 185);
     box-shadow: 1px 1px 10px #bbb,
                 -1px -1px 10px #bbb,
                 1px -1px 10px #bbb,
                 -1px 1px 10px #bbb;
   }
+  #new-container{
+    background-color: rgb(241, 221, 185);
+  }
+  #edit-container{
+    background-color: rgb(193, 187, 176);
+  }
+  #show-container{
+  width: 80vw;
+  height: 30vw;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: rgb(214, 235, 173);
+  box-shadow: 1px 1px 10px #bbb,
+              -1px -1px 10px #bbb,
+              1px -1px 10px #bbb,
+              -1px 1px 10px #bbb;
+}
+
+#show-body{
+    background: linear-gradient(135deg, #d8fabf 10%, #623AA2 100%)
+}
+
+#habit-name{
+    color:#623AA2
+}

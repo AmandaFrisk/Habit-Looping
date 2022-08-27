@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="show-html" lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <title>Show Page</title>
 </head>
-<body>
-    <a href="/habits/">BACK TO THE HABITS LIST PAGE</a> 
-    <div>
+<body id ="show-body">
+<a href="/habits/">BACK TO THE HABITS LIST PAGE</a> 
+<div id="show-title-div" class="text-center">
     <h1>HABIT INFO</h1>
-    <h2> Habit: <%= habit.habit %> </h2>
-    <p>Description: <%= habit.description %> </p>
-    <p>Goal: <%= habit.goal %></p>
 </div>
+<div id="show-container" class="fluid-my-5">
+    <h2 id="show-habit"> Habit: <%= habit.habit %> </h2>
+    <p id="show-description">Description: <%= habit.description %> </p>
+    <p id="show-goal">Goal: <%= habit.goal %></p>
+    <div class="d-flex justify-content-center" >
+    <form id="delete-btn"  action="/habits/<%=habit.id %>?_method=DELETE" method="POST">
+        <input class="btn btn-sm btn-outline-danger" type="submit" value="DELETE"/>
+    </div>
+</div> 
 <!-- DELETE BTN -->
-<form action="/habits/<%=habit.id %>?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE"/>
 </form> 
 </body>
 </html>
