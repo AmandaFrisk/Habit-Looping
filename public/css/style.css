@@ -1,0 +1,19 @@
+#list-h1{
+font-family: Arial, Helvetica, sans-serif;
+}
+#list-div{
+    background-color: rgb(167, 241, 162);
+}
+
+#new-container{
+    width: 80vw;
+    height: 25vw;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(241, 221, 185);
+    box-shadow: 1px 1px 10px #bbb,
+                -1px -1px 10px #bbb,
+                1px -1px 10px #bbb,
+                -1px 1px 10px #bbb;
+  }
