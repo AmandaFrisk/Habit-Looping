@@ -11,21 +11,24 @@
 <body id="edit-body">
 
     <a href="/habits/">BACK TO THE HABITS LIST PAGE</a>  
+   <div id="edit-container">
+    <div class="container-fluid">
     <form action="/habits/<%=habit.id%>?_method=PUT" method="POST">
         <!-- method is POST because we are creating data  -->
-        <fieldset>
-             <label for="habit">Habit:</label>
-            <input  type ="text" name="habit" id ="habit" value="<%=habit.habit %>"/>
-        </fieldset>
-        <fieldset>
-            <label for="description">Description:</label>
-            <input type ="text" name="description"  id ="description" value="<%=habit.description%>"/>
-        </fieldset>
-        <fieldset>
-             <label for="goal">Goal</label>
-             <input type ="text" name="goal"  id ="goal" value="<%=habit.goal%>"/>
-         </fieldset>
+        <div class="container-fluid" >
+             <label class="form-label" for="habit">Habit:</label>
+            <input class="form-control"  type ="text" name="habit" id ="habit" value="<%=habit.habit %>"/>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="description">Description:</label>
+            <input class="form-control" type ="text" name="description"  id ="description" value="<%=habit.description%>"/>
+        </div>
+        <div class="form-group">
+             <label class="form-label"for="goal">Goal</label>
+             <input class="form-control" type ="text" name="goal"  id ="goal" value="<%=habit.goal%>"/>
+        </div>
          <input type="submit" name='submit' value="Submit Changes">
-        
+     </div>
+    </div>
 </body>
 </html>
