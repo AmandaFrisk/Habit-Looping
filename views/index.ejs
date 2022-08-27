@@ -12,16 +12,16 @@
   </head>
 <body class="d-flex flex-column min-vh-100">
   <!-- footer We’re making it flex, with the content in columns, from top to bottom, and with a minimum height of 100vh, which means that the element will be equal to 100% of the viewport’s height. -->
-
+<div>
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="https://i.imgur.com/5X5lg3A.png" width="150" height="150" class="d-inline-block align-top" alt="">
+    <img class="logo-image" src="https://i.imgur.com/5X5lg3A.png"  class="d-inline-block align-top" alt="">
   </a>
-  <div id="add-new-div">
-    <a  class="text-decoration-none" href="/habits/new" >ADD A NEW HABIT
-    </a>
-  </div>
+   <a href="/habits/new">
+        <img id="index-add-btn"src="https://i.imgur.com/FRg9QC3.png" alt="add a new plus sign image">
+  </a>  
 </nav>
+</div>
   <div id="list-div" class="text-center">
     <h1 id="list-h1">List of Habits</h1>
   </div>
@@ -39,7 +39,9 @@
                 </h5>
                 <h10>
                   <div id="edit">
-                    <a  class="text-decoration-none" href="/habits/<%=allHabits[i].id%>/edit">Edit</a>
+                    <a  class="text-decoration-none" href="/habits/<%=allHabits[i].id%>/edit">
+                      <img id="edit-btn"src="https://i.imgur.com/U0xnsRd.png" alt="Edit Button Image - Custom Icon @clipartmax.com">
+                      </a>
                   </div>
                 </h10>
                </li>

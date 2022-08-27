@@ -10,7 +10,11 @@
 </head>
 <body id="edit-body">
 
-    <a href="/habits/">BACK TO THE HABITS LIST PAGE</a>  
+    <nav>
+        <a href="/habits/">
+            <img id="new-bk-btn"src="https://i.imgur.com/CCKy7v9.png" alt="back to habits list arrow">
+        </a>  
+    </nav>
    <div id="edit-container">
     <div class="container-fluid">
     <form action="/habits/<%=habit.id%>?_method=PUT" method="POST">
