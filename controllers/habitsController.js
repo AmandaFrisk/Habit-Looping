@@ -10,7 +10,19 @@ const router = express.Router()
 //require the habits.js from the models
 const Habit = require('../models/habits.js')
 
+// CUSTOM MIDDLEWARE TO REQUIRE AUTHENTICATION ON ROUTES
+const authRequired = (req, res, next)=>{
 
+
+if(req.session.currentUser){
+//a user is signed in
+//continue on to next thing using next()
+next() 
+}else{
+  //if there is no user
+  res.send('You must be logged in to access this page!')
+}
+}
 //Use router rather than app so it is a little faster 
 //ROUTES
 
@@ -18,7 +30,7 @@ const Habit = require('../models/habits.js')
 
 //INDEX ROUTE
 
-router.get('/', (req,res)=>{
+router.get('/', authRequired, (req,res)=>{
     // res.send('index route is working')
     Habit.find({}, (error, allHabits)=>{
       console.log(allHabits)
@@ -31,7 +43,7 @@ router.get('/', (req,res)=>{
 
 
 //NEW ROUTE
-router.get('/new', (req, res) => {
+router.get('/new', authRequired, (req, res) => {
     //  res.send('new route is working')
     res.render('new.ejs')
 
@@ -41,7 +53,7 @@ router.get('/new', (req, res) => {
 //POST CREATE ROUTE
 router.post('/', (req,res)=>{
   
-  Habit.create(req.body, (err, createdHabit)=>{
+  Habit.create(req.body, authRequired, (err, createdHabit)=>{
       if(err) {
           console.log('error', error)
           res.send(error)
@@ -51,7 +63,7 @@ router.post('/', (req,res)=>{
   })
 })
 //SHOW ROUTE
-router.get('/:id',  (req, res) => {
+router.get('/:id', authRequired, (req, res) => {
   // res.send('show route is working')
    Habit.findById(req.params.id, (err, foundHabit)=>{
       
@@ -61,7 +73,7 @@ router.get('/:id',  (req, res) => {
   });
 });
 //EDIT ROUTE
-router.get('/:id/edit', (req, res)=>{
+router.get('/:id/edit', authRequired,(req, res)=>{
   Habit.findById(req.params.id, (err, foundHabit)=>{ //find the product  
       res.render(
       'edit.ejs',
@@ -72,7 +84,7 @@ router.get('/:id/edit', (req, res)=>{
 })
 
 //UPDATE
-router.put('/:id', (req,res)=>{
+router.put('/:id', authRequired, (req,res)=>{
   Habit.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,updatedProduct)=>{
     if (err){
       console.log('update err', err)
@@ -84,7 +96,7 @@ router.put('/:id', (req,res)=>{
 
 
 //DELETE
-router.delete('/:id', (req, res)=>{
+router.delete('/:id', authRequired, (req, res)=>{
   Habit.findByIdAndRemove(req.params.id, (err, data)=>{
       res.redirect('/habits') //redirect back to index page
   })
