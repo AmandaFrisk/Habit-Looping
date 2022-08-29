@@ -30,8 +30,10 @@ router.post('/register', (req,res)=>{
             res.send('this username is taken')
         } else{
             User.create(req.body, (err, createdUser)=>{
-                console.log(createdUser)
-                res.send('user created')
+                // console.log(createdUser)
+                // res.send('user created')
+                req.session.currentUser = createdUser
+                res.redirect('/habits')
             })
         }
     })
@@ -55,16 +57,26 @@ router.post('/signin', (req,res) => {
         if (validLogin){
             //let session know there is a successful login
             req.session.currentUser = foundUser
-            res.send('User logged in')
+             res.redirect('/habits')
+
         } else {
             //if they dont match
             res.send('Invalid username or password')
+            // res.redirect('/signin')
         }
         } else {
             //if they don't exist
             res.send('Invalid username or password')
+            // res.redirect('/signin')
         }
     })
+})
+
+//DESTROY SESSION ROUTE
+router.get('/signout', (req,res)=>{
+   //destoy the session
+    req.session.destroy()
+    res.redirect('/home')
 })
 
 module.exports= router

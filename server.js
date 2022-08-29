@@ -65,6 +65,11 @@ app.get("/", (req,res)=>{
 res.send("default route working")
 })
 
+//HOME
+app.get("/home", (req,res)=>{
+    res.render('home.ejs')
+    })
+  
 // LISTEN FOR PORT
 app.listen (PORT, ()=> {
     console.log(` Server running on port ${PORT}`)

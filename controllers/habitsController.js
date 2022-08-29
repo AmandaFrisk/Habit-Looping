@@ -15,7 +15,6 @@ const Habit = require('../models/habits.js')
 //ROUTES
 
 
-//DEFAULT
 
 //INDEX ROUTE
 
@@ -90,7 +89,6 @@ router.delete('/:id', (req, res)=>{
       res.redirect('/habits') //redirect back to index page
   })
 })
-
 
 
 
