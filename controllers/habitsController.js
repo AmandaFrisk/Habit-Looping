@@ -27,10 +27,9 @@ next()
 //ROUTES
 
 
+//Index ROUTE
 
-//INDEX ROUTE
-
-router.get('/', authRequired, (req,res)=>{
+router.get('/',  (req,res)=>{
     // res.send('index route is working')
     Habit.find({}, (error, allHabits)=>{
       console.log(allHabits)
