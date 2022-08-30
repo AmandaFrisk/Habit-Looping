@@ -61,9 +61,9 @@ app.use('/habits', habitsController)
 app.use('/users', userController)
 
 //DEFAULT
-// app.get("/", (req,res)=>{
-// res.send('default working' )
-// })
+app.get("/", (req,res)=>{
+res.send('default route working')
+})
 
 
 // LISTEN FOR PORT
