@@ -62,7 +62,7 @@ app.use('/users', userController)
 
 //DEFAULT
 app.get("/", (req,res)=>{
-res.send("default route working")
+// res.render(('home.ejs'))
 })
 
 
