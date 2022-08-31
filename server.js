@@ -64,6 +64,7 @@ app.use('/users', userController)
 app.get("/", (req,res)=>{
 // res.send('default route working')
 res.render('home.ejs')
+
 })
 
 

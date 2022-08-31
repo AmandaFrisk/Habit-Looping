@@ -33,7 +33,7 @@ router.post('/register', (req,res)=>{
                 // console.log(createdUser)
                 // res.send('user created')
                 req.session.currentUser = createdUser
-                res.redirect('index.ejs')
+                res.redirect('/habits')
             })
         }
     })
@@ -57,7 +57,7 @@ router.post('/signin', (req,res) => {
         if (validLogin){
             //let session know there is a successful login
             req.session.currentUser = foundUser
-             res.redirect('index.ejs')
+             res.redirect('/habits')
 
         } else {
             //if they dont match
@@ -76,7 +76,7 @@ router.post('/signin', (req,res) => {
 router.get('/signout', (req,res)=>{
    //destoy the session
     req.session.destroy()
-    res.redirect('/habits')
+    res.redirect('/')
 })
 
 module.exports= router
