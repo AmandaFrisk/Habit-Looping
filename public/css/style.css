@@ -82,4 +82,15 @@ font-family: Arial, Helvetica, sans-serif;
 #preview-cont{
     width:650px;
     height: 650px;
+    margin-top: 250px;
+    text-align: center;
+    margin: auto
 }
+
+#jumbotron-div{
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+
+
