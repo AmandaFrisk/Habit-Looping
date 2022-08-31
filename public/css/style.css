@@ -12,6 +12,10 @@ font-family: Arial, Helvetica, sans-serif;
 #show-title-div{
     background-color:white;
 }
+
+#edit-title-div{
+    background-color:rgba(214, 125, 212, 0.638);
+}
  #edit-container, #new-container{
     width: 80vw;
     height: 25vw;
