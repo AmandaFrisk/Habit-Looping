@@ -52,9 +52,9 @@ router.get('/new', authRequired, (req, res) => {
 //POST CREATE ROUTE
 router.post('/', (req,res)=>{
   
-  Habit.create(req.body, authRequired, (err, createdHabit)=>{
+  Habit.create(req.body,  (err, createdHabit)=>{
       if(err) {
-          console.log('error', error)
+          console.log('error', err)
           res.send(err)
       } else {
           res.redirect('/habits')
