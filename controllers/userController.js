@@ -76,7 +76,7 @@ router.post('/signin', (req,res) => {
 router.get('/signout', (req,res)=>{
    //destoy the session
     req.session.destroy()
-    res.redirect('/home.ejs')
+    res.redirect('/')
 })
 
 module.exports= router
