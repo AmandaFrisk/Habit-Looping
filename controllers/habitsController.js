@@ -55,7 +55,7 @@ router.post('/', (req,res)=>{
   Habit.create(req.body, authRequired, (err, createdHabit)=>{
       if(err) {
           console.log('error', error)
-          res.send(error)
+          res.send(err)
       } else {
           res.redirect('/habits')
       }
