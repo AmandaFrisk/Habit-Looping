@@ -30,8 +30,8 @@ font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(193, 187, 176);
   }
   #show-container{
-  width: 80vw;
-  height: 30vw;
+  width: 50vw;
+  height: 20vw;
   margin: 50px auto;
   border-radius: 10px;
   background-color: rgb(214, 235, 173);
@@ -39,6 +39,7 @@ font-family: Arial, Helvetica, sans-serif;
               -1px -1px 10px #bbb,
               1px -1px 10px #bbb,
               -1px 1px 10px #bbb;
+   position :relative;
 }
 
 #show-body{
@@ -76,4 +77,11 @@ font-family: Arial, Helvetica, sans-serif;
 
 #index-signout{
     margin-right: 50px;
+}
+
+
+
+#delete-cont{
+    position: absolute;
+    bottom: 0;
 }
