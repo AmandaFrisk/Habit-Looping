@@ -14,4 +14,41 @@
         <a class="text-decoration-none" href ='users/signin'> Sign-In </a>
     </nav>
 
+<div id="preview-cont"  class='d-flex align-items-center justify-content-center' >
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+              <h3>QUICK VIEW LIST OF YOUR HABITS</h3>
+            <img src="https://i.imgur.com/0beZSHj.png" class="d-block w-100" alt="habit list page image">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+              <h3>VIEW DETAILS ABOUT EACH HABIT</h3>
+            <img src="https://i.imgur.com/ffw5yy6.png" class="d-block w-100" alt="habit info page image">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+              <h3>MAKE CHANGES TO YOUR HABITS AND GOALS</h3>
+            <img src="https://i.imgur.com/Umr7lz7.png" class="d-block w-100" alt="edit habit page image">
+            </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
     <%- include('./partials/footer.ejs') %>

@@ -79,4 +79,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
-
+#preview-cont{
+    width:650px;
+    height: 650px;
+}
