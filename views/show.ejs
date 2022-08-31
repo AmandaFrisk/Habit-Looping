@@ -18,12 +18,12 @@
 <div id="show-title-div" class="text-center">
     <h1>HABIT INFO</h1>
 </div>
-<div id="show-container"  class="fluid-my-5">
+<div id="show-container" class="d-flex align-items-end flex-column" >
     <h2 id="show-habit"> Habit: <%= habit.habit %> </h2>
     <p id="show-description">Description: <%= habit.description %> </p>
     <p id="show-goal">Goal: <%= habit.goal %></p>
    
-    <div id="delete-cont" class="d-flex justify-content-center" >
+    <div id="delete-cont"  class="mt-auto p-2">
     
     
     <form id="delete-btn"  action="/habits/<%=habit.id %>?_method=DELETE" method="POST">

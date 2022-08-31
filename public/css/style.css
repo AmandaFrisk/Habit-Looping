@@ -39,7 +39,6 @@ font-family: Arial, Helvetica, sans-serif;
               -1px -1px 10px #bbb,
               1px -1px 10px #bbb,
               -1px 1px 10px #bbb;
-   position :relative;
 }
 
 #show-body{
@@ -81,7 +80,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 
-#delete-cont{
-    position: absolute;
-    bottom: 0;
-}
+/* #delete-cont{
+    display: flex;
+    justify-content:center;
+} */
