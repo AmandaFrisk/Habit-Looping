@@ -5,6 +5,8 @@ The Habit Looping application was created as a unit 2 project for a software eng
 
 The current application allows users to register and gain access to a shared database with a list of habits. Users can view, edit, add and delete habits from the list. 
 
+The application is deployed through Heroku and can be accessed here: https://habit-looping-app.herokuapp.com/
+
 Forthcoming Features:
 
 Individual database rather than shared. |
