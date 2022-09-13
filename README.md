@@ -49,6 +49,6 @@ Create an application that is : user friendly, aesthetically pleasing and set up
 
 
 Unsolved Problems:
-The sign out feature appears to work sometimes but not others. Thus far it appears to sometimes not work after user makes an edit then tries to sign out directly after. 
+N/A
 
 
